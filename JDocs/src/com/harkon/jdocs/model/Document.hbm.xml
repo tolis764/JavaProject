@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class lazy="false"  name="com.harkon.jdocs.model.Document" table="DOCUMENT" /> <!--dynamic-insert="false" dynamic-update="false" mutable="true" optimistic-lock="version" polymorphism="implicit" select-before-update="false"-->
+    <id column="ID" name="id" type="java.lang.Integer">
+      <generator class="identity"/>
+    </id>
+    <property column="NAME" name="name" type="java.lang.String"/>
+    <property column="DESC" name="desc" type="java.lang.String"/>
+    <property column="DOC_TYPE" name="docType" type="java.lang.Integer"/>
+    <!-- Associations -->
+
+    </class>
+</hibernate-mapping>

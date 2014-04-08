@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.harkon.jdocs.model">
+  <class lazy="false" name="com.harkon.jdocs.model.ActionHistory" table="ACTION_HISTORY" /> <!-- eixe auta: dynamic-insert="false" dynamic-update="false" mutable="true" optimistic-lock="version" polymorphism="implicit" select-before-update="false" kai den eixe auto: lazy="false" (oute to table)-->
+    <id column="ID" name="id" type="java.lang.Integer">
+      <generator class="identity"/>
+    </id>
+    <property column="ACTION_TIME" name="actionTime" type="java.util.Date"/>
+    <property column="ACTION_NAME" name="actionName" type="java.lang.String"/>
+    <property column="DESC" name="desc" type="java.lang.String"/>
+    <!-- Associations -->
+    <many-to-one class="User" column="USER_ID" name="user"/>
+    
+   </class>
+
+
+
+</hibernate-mapping>
