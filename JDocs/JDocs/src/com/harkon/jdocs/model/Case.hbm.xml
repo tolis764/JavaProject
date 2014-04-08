@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class lazy="false"  name="com.harkon.jdocs.model.Case" table="CASE" /> <!--dynamic-insert="false" dynamic-update="false" mutable="true" optimistic-lock="version" polymorphism="implicit" select-before-update="false"-->
+    <id column="ID" name="id" type="java.lang.Integer">
+      <generator class="identity"/>
+    </id>
+    <property column="TITLE" name="title" type="java.lang.String"/>
+    <property column="DESC" name="desc" type="java.lang.String"/>
+    <property column="CLIENT_ENTITY_ID" name="clientEntityId" type="java.lang.Integer"/>
+    <property column="CASE_TYPE_ID" name="caseTypeId" type="java.lang.Integer"/>
+     <!-- Associations -->
+
+    </class>
+</hibernate-mapping>
