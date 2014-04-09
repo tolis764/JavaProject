@@ -5,29 +5,29 @@
 package com.harkon.jdocs.model.base;
 
 import java.io.Serializable;
+import org.omg.CORBA.INITIALIZE;
 
 /**
  *
  * @author tolis
  */
-public abstract class BaseCase implements Comparable, Serializable {
+public abstract class BaseDocumentType implements Comparable, Serializable {
 
-    public static String REF = "Case";
-    public static String PROP_ID = "id";
-    public static String PROP_TITLE = "title";
+    public static String REF = "DocumentType";
     public static String PROP_DESC = "desc";
-    public static String PROP_CLIENT_ENTITY_ID = "clientEntityId";
-    public static String PROP_CASE_TYPE_ID = "caseTypeId";
+    public static String PROP_EXTENSION = "extension";
+    public static String PROP_DOCUMENT_TYPECOL = "documentTypecol";
+    public static String PROP_ID = "id";
 
-    //Constructors
-    public BaseCase() {
+    //constructors
+    public BaseDocumentType() {
         initialize();
     }
 
     /**
      * Constructor for primary key
      */
-    public BaseCase(java.lang.Integer id) {
+    public BaseDocumentType(java.lang.Integer id) {
         this.setId(id);
         initialize();
     }
@@ -38,10 +38,9 @@ public abstract class BaseCase implements Comparable, Serializable {
     // primary key
     private java.lang.Integer id;
     // fields
-    private java.lang.String title;
     private java.lang.String desc;
-    private java.lang.Integer clientEntityId;
-    private java.lang.Integer caseTypeId;
+    private java.lang.String extension;
+    private java.lang.String documentTypecol;
 
     // many to one... not yet!
     /**
@@ -64,21 +63,6 @@ public abstract class BaseCase implements Comparable, Serializable {
     }
 
     /**
-     * Return the value associated with the column: TITLE
-     */
-    public java.lang.String getTitle() {
-        return title;
-    }
-
-    /**
-     * Set the value related to the column: TITLE
-     * @param name the TITLE value
-     */
-    public void setTitle(java.lang.String title) {
-        this.title = title;
-    }
-
-    /**
      * Return the value associated with the column: DESC
      */
     public java.lang.String getDesc() {
@@ -94,33 +78,33 @@ public abstract class BaseCase implements Comparable, Serializable {
     }
 
     /**
-     * Return the value associated with the column: CLIENT_ENTITY_ID
+     * Return the value associated with the column: EXTENSION
      */
-    public java.lang.Integer getClientEntityId() {
-        return clientEntityId;
+    public java.lang.String getExtension() {
+        return extension;
     }
 
     /**
-     * Set the value related to the column: CLIENT_ENTITY_ID
-     * @param clientEntityId the CLIENT_ENTITY_ID value
+     * Set the value related to the column: EXTENSION
+     * @param name the EXTENSION value
      */
-    public void setClientEntityId(java.lang.Integer clientEntityId) {
-        this.clientEntityId = clientEntityId;
+    public void setExtension(java.lang.String extension) {
+        this.extension = extension;
     }
 
     /**
-     * Return the value associated with the column: CASE_TYPE_ID
+     * Return the value associated with the column: DOCUMENT_TYPECOL
      */
-    public java.lang.Integer getCaseTypeId() {
-        return caseTypeId;
+    public java.lang.String getDocumentTypecol() {
+        return documentTypecol;
     }
 
     /**
-     * Set the value related to the column: CASE_TYPE_ID
-     * @param caseTypeId the CASE_TYPE_ID value
+     * Set the value related to the column: DOCUMENT_TYPECOL
+     * @param name the DOCUMENT_TYPECOL value
      */
-    public void setCaseTypeId(java.lang.Integer caseTypeId) {
-        this.caseTypeId = caseTypeId;
+    public void setDocumentTypecol(java.lang.String documentTypecol) {
+        this.documentTypecol = documentTypecol;
     }
 
     public int compareTo(Object o) {

@@ -13,5 +13,8 @@
     <mapping resource="com/harkon/jdocs/model/Terminal.hbm.xml"/>
     <mapping resource="com/harkon/jdocs/model/Document.hbm.xml"/>
     <mapping resource="com/harkon/jdocs/model/Case.hbm.xml"/>
+    <mapping resource="com/harkon/jdocs/model/ClientEntity.hbm.xml"/>
+    <mapping resource="com/harkon/jdocs/model/DocumentType.hbm.xml"/>
+    <mapping resource="com/harkon/jdocs/model/CaseDocument.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

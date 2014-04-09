@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class lazy="false"  name="com.harkon.jdocs.model.CaseDocument" table="CASE_DOCUMENT" /> <!--dynamic-insert="false" dynamic-update="false" mutable="true" optimistic-lock="version" polymorphism="implicit" select-before-update="false"-->
+    <composite-id>
+     <key-property column="CASEID" name="caseId" type="java.lang.Integer"/>
+     <key-property column="DOCUMENTID" name="documentId" type="java.lang.Integer"/>
+    </composite-id>
+    <property column="CREATED_AT" name="createdAt" type="java.util.Date"/>
+    <property column="CREATED_BY" name="createdBy" type="java.lang.Integer"/>
+    <property column="MODIFIED_AT" name="modifiedAt" type="java.util.Date"/>
+    <property column="MODIFIED_BY" name="modifiedBy" type="java.lang.Integer"/>
+    <property column="TERMINAL_ID" name="terminalId" type="java.lang.Integer"/>
+    <property column="CASE_DOCUMENTCOL" name="caseDocumentcol" type="java.lang.String"/>
+     <!-- Associations -->
+ </class>
+</hibernate-mapping>

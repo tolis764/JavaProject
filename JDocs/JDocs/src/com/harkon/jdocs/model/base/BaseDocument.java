@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author tolis
  */
-public class BaseDocument implements Comparable, Serializable {
+public abstract class BaseDocument implements Comparable, Serializable {
 
     public static String REF = "Document";
     public static String PROP_ID = "id";
